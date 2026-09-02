@@ -2,10 +2,10 @@
 
 namespace PrepKitTests;
 
-public class UnitTest1
+public class ArraysTests
 {
     [Fact]
-    public void Test1()
+    public void LeftRotateTest()
     {
 
         var numOfRotations = 4;
