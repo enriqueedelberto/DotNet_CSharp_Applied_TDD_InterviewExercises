@@ -9,19 +9,30 @@ namespace PrepKitTests
 {
     public class WarmUpTests
     {
-        [Fact]
-        public void ValleyCountingTest1()
+        [Theory]
+        [InlineData(8, "UDDDUDUU", 1)]
+        [InlineData(12, "DDUUDDUDUUUD", 2)]
+        public void ValleyCountingTest1(int steps, string path, int expectedResult )
         {
-            //Arrange
-            var expectedResult = 1;
-            var steps = 8;
-            var path = "UDDDUDUU";
-
+            //Arrange  
             //Act
             var result = ValleyCounting.CountValleys(steps, path);
 
             //Assert
-            Assert.Equal(result, expectedResult);
+            Assert.Equal(expectedResult, result );
+        }
+
+
+        [Theory]
+        [InlineData(10, "DUDDDUUDUU", 2)] 
+        public void ValleyCountingTest_Failed(int steps, string path, int expectedResult )
+        {
+            //Arrange  
+            //Act
+            var result = ValleyCounting.CountValleys(steps, path);
+
+            //Assert
+            Assert.Equal(expectedResult, result );
         }
     }
 }
