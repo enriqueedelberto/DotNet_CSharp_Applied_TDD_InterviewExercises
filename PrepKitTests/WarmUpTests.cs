@@ -11,6 +11,7 @@ namespace PrepKitTests
     {
         [Theory]
         [InlineData(8, "UDDDUDUU", 1)]
+        [InlineData(8, "DDUUUUDD", 1)]
         [InlineData(12, "DDUUDDUDUUUD", 2)]
         public void ValleyCountingTest1(int steps, string path, int expectedResult )
         {
