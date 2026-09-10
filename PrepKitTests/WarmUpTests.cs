@@ -35,5 +35,18 @@ namespace PrepKitTests
             //Assert
             Assert.Equal(expectedResult, result );
         }
+
+        [Theory]
+        [InlineData(7, new int []{1,2,1,2,3,2}, 2)] 
+        public void SockMerchant_CountPairs_Test1(int n, int[] ar, int expectedResult )
+        {
+            //Arrange  
+            var arList = ar.ToList();
+            //Act
+            var result = SockMerchant.CountPairs(n, arList);
+
+            //Assert
+            Assert.Equal(expectedResult, result );
+        }
     }
 }
