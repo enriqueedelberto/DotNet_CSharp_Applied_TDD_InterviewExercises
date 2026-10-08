@@ -21,8 +21,7 @@ public class SockMerchant
                 continue;
             }
         }
- 
-
+  
         return quantityOfPairs;
     }
 }
